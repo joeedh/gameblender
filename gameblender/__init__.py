@@ -1,13 +1,15 @@
 import bpy, imp
 
-from . import util, ui, sector, ops, load, props
+from . import config, util, ui, sector, ops, load, props, gen
 
+imp.reload(config)
 imp.reload(util)
 imp.reload(props)
 imp.reload(ops)
 imp.reload(ui)
 imp.reload(load)
 imp.reload(sector)
+imp.reload(gen)
 
 bpy_exports = props.bpy_exports + ops.bpy_exports + ui.bpy_exports
 
